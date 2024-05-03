@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | RKurniaw</title>
+
+    <!-- website icon -->
+    <link rel="website icon" type="png" href="assets/website-icon.png" />
+
+    <!-- boc icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- swiper css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <!-- cdnjs font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- dark mode local storage -->
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-theme')
+      } else {
+        document.documentElement.classList.remove('dark-theme')
+      }
+    </script>
+
+    <!-- customs css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+  </head>
+  <body class="body" id="body">
+    <!-- header start -->
+    <header class="header">
+      <!-- navigation menu start-->
+      <div class="nav-menu">
+        <!-- navigation image start -->
+        <div class="nav-image">
+          <a href="#"><img src="assets/dark_logo.png" alt="my_logo" /></a>
+        </div>
+        <!-- navigation image end -->
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <nav class="navbar">
+          <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li>
+              <a href="#portfolio" class="dropdown">
+                <span>Portfolio<span class="dropdown-list"><i class="bx bxs-down-arrow"></span></i></span>
+                <div class="dropdown-content">
+                  <a href="#portfolio">Last Project</a>
+                  <a href="#certification">Certification</a>
+                </div>
+              </a>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- navigation dark mode icon start -->
+        <div class="dark-mode-icon">
+          <label>
+            <input type="checkbox" id="dark-toggle" />
+            <i class="bx bxs-sun"></i>
+            <i class="bx bxs-moon"></i>
+            <!-- <span class="toggle"></span> -->
+            <!-- <span class="animatedBg"></span> -->
+          </label>
+        </div>
+        <!-- navigation dark mode icon end -->
+      </div>
+      <!-- navigation menu end-->
+    </header>
+    <!-- header end -->
+
+    <!-- home section start -->
+    <section id="home" class="home">
+      <div class="container">
+        <div class="home-container">
+          <div class="info-side">
+            <h3>Hello, It's Me</h3>
+            <h1>Rizki Kurniawan</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>
+              Hi, I am a beginner programmer and web developer domiciled in
+              Banjarnegara, Central Java, Indonesia. Currently still learning
+              basic HTML, CSS & JavaScript.
+            </p>
+            <a href="assets/cv.jpg" target="_blank" class="btn">Download CV</a>
+            <a href="#contact" class="btn">Contact Me</a>
+          </div>
+
+          <div class="photo-side">
+            <img src="assets/home.png" alt="my_photo" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- home section end -->
+
+    <!-- about section start -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-container">
+          <div class="about-photo">
+            <img src="assets/about.png" alt="my_photo2" />
+          </div>
+          <div class="about-me">
+            <h1>About <span>Me</span></h1>
+            <h2>
+              Let me introduce myself, my name is Rizki Kurniawan. Now I live in Indonesia. Currently I am learning about Web Development & Software Engineering.
+            </h2>
+            <p>
+              Let's get to know each other further. Below I have included my experience and personal biography. And don't forget to visit my social media to say hello.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>UI/UX</span><br />Designing Web/App interfaces</li>
+                <li><span>Web Development</span><br />Web app Development</li>
+                <li>
+                  <span>Software Engineering</span><br />Software Development
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2017 - 2019</span><br />Customs Facility Staff at Detmold Packaging.
+                </li>
+                <li><span>2015 - 2017</span><br />Exim Staff at PT. Detpak.</li>
+                <li>
+                  <span>2014 - 2015</span><br />Entry Data at PT. D&D.
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2014</span><br />Passed Senior High School.
+                </li>
+                <li><span>2012</span><br />Passed Junior High School.</li>
+                <li><span>2008</span><br />Passed Elementary School.</li>
+              </ul>
+            </div>
+            <h2>Let's Be Friend</h2>
+            <div class="social-media">
+              <a href="https://github.com/rkurniaw" target="_blank"><i class="bx bxl-github"></i></a>
+              <a href="https://facebook.com" target="_blank"><i class="bx bxl-facebook"></i></a>
+              <a href="https://twitter.com" target="_blank"><i class="bx bxl-twitter"></i></a>
+              <a href="https://instagram.com" target="_blank"><i class="bx bxl-instagram-alt"></i></a>
+              <a href="https://linkedin.com" target="_blank"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://youtube.com" target="_blank"><i class="bx bxl-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about section end -->
+
+    <!-- services section start -->
+    <section id="services" class="services">
+      
+      <!-- info page -->
+      <div class="label-page">
+        <div class="info-page">
+        <a href="public/info.html" target="_blank"><i class='bx bx-info-circle'></i>This page has not been updated</a>
+        </div>
+      </div>
+
+      <div class="container">
+        <h1>My <span>Services</span></h1>
+        <div class="services-container">
+          <div class="services-box">
+            <i class="bx bx-code-alt"></i>
+            <h3>Web Development</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Mollitia, excepturi esse dicta, magnam, velit veritatis quia illo
+              minus officia facere exercitationem corporis?
+            </p>
+            <a href="#" class="btn">Read More</a>
+          </div>
+
+          <div class="services-box">
+            <i class="bx bxs-paint"></i>
+            <h3>Graphic Design</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Mollitia, excepturi esse dicta, magnam, velit veritatis quia illo
+              minus officia facere exercitationem corporis?
+            </p>
+            <a href="#" class="btn">Read More</a>
+          </div>
+
+          <div class="services-box">
+            <i class="bx bx-bar-chart-alt"></i>
+            <h3>Digital Marketing</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Mollitia, excepturi esse dicta, magnam, velit veritatis quia illo
+              minus officia facere exercitationem corporis?
+            </p>
+            <a href="#" class="btn">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- services section end -->
+
+    <!-- portfolio section start -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <h1>Lates <span>Project</span></h1>
+        <div class="portfolio-container">
+          <div class="portfolio-box">
+            <img src="assets/portfolio.PNG" alt="" />
+            <div class="portfolio-layer">
+              <h4>Portfolio Design</h4>
+              <p>
+                This is a Web Design project to create a personal portfolio. This is a project that appears in my portfolio. Accessing the link below will still lead to this page.
+              </p>
+              <a href="index.html"><i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+
+          <div class="portfolio-box">
+            <img src="assets/onprogress.jpg" alt="" />
+            <div class="portfolio-layer">
+              <h4>Web Design</h4>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Numquam, nulla perspiciatis.
+              </p>
+              <a href="#"><i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+
+          <div class="portfolio-box">
+            <img src="assets/onprogress.jpg" alt="" />
+            <div class="portfolio-layer">
+              <h4>Web Design</h4>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Numquam, nulla perspiciatis.
+              </p>
+              <a href="#"><i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+
+          <div class="portfolio-box">
+            <img src="assets/coomingsoon.jpg" alt="" />
+            <div class="portfolio-layer">
+              <h4>Web Design</h4>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Numquam, nulla perspiciatis.
+              </p>
+              <a href="#"><i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+
+          <div class="portfolio-box">
+            <img src="assets/coomingsoon.jpg" alt="" />
+            <div class="portfolio-layer">
+              <h4>Web Design</h4>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Numquam, nulla perspiciatis.
+              </p>
+              <a href="#"><i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+
+          <div class="portfolio-box">
+            <img src="assets/coomingsoon.jpg" alt="" />
+            <div class="portfolio-layer">
+              <h4>Web Design</h4>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Numquam, nulla perspiciatis.
+              </p>
+              <a href="#"><i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- certification design start -->
+      <div class="certification-container" id="certification">
+        <div class="certification-wrapper">
+          <h1>Course <span>Certification</span></h1>
+          <div class="certification-box mySwiper">
+            <div class="certification-content swiper-wrapper">
+              <div class="certification-slide swiper-slide">
+                <img src="assets/certification1.jpg" alt="" />
+                <h3>Course-Net</h3>
+                <p>
+                  Completion Certification. Application creation techniques using JavaScript and Node.js for JavaScript Enginers as Application Programs. Graduated with the title "VERY GOOD", because he had completed 15 hours of training on 05 APRIL 2024.
+                </p>
+                <a
+                  href="assets/CompletionCertificateRizki Kurniawan-108500.pdf"
+                  target="_blank"
+                  ><i class="bx bxs-file-pdf"></i
+                ></a>
+              </div>
+
+              <div class="certification-slide swiper-slide">
+                <img src="assets/certification2.jpg" alt="" />
+                <h3>RevoU</h3>
+                <p>
+                  Fundamental Course. Has been award a Certificate of Attendance for Intro to Software Engineering, a 2-weeks certified inline course offered by RevoU.
+                </p>
+                <a
+                  href="assets/rizki-kurniawan-certificate-attendance-sefc.pdf"
+                  target="_blank"
+                  ><i class="bx bxs-file-pdf"></i
+                ></a>
+              </div>
+
+              <div class="certification-slide swiper-slide">
+                <img src="" alt="" />
+                <h3>#On Going</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Excepturi sunt expedita impedit cupiditate quas, doloremque
+                  dolorum ipsum, repellat mollitia ab vero dicta est
+                  consequuntur libero repellendus voluptatibus molestias rerum
+                  a?
+                </p>
+                <a href="" target="_blank"><i class="bx bxs-file-pdf"></i></a>
+              </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <!-- certification design end -->
+    </section>
+    <!-- portfolio section end -->
+
+    <!-- contact section start -->
+    <section class="contact" id="contact">
+      
+      <!-- info page -->
+      <div class="label-page">
+        <div class="info-page">
+        <a href="public/info.html" target="_blank"><i class='bx bx-info-circle'></i>This page has not been updated</a>
+        </div>
+      </div>
+
+      <div class="container">
+          <h1 class="heading">Contact <span>Me!</span></h1>
+          <form action="#" name="portfolio-contact-form">
+            <div class="alert-succes hide">
+              <p><span><strong>Thank You. </strong>
+                We will immediately reply your message. <a href="https://accounts.google.com">Check your email.</a></span>
+                <button type="button" class="btn-close-as"><i class='bx bx-x'></i></button>
+              </p>
+            </div>
+            <div class="alert-warning hide">
+              <p><span><strong>Warning! </strong>Message not sent. Complete the input fields</span>
+                <button type="button" class="btn-close-aw"><i class='bx bx-x'></i></button>
+              </p>
+            </div>
+            <div class="input-box">
+              <div class="input-field field">
+                <input type="text" placeholder="Full Name" id="name" class="field item" autocomplete="off" name="name"/>
+                <div class="error-text">Full Name can't be blank</div>
+              </div>
+              <div class="input-field field">
+                <input type="email" placeholder="Email Address" id="email" class="field item" autocomplete="off" name="email"/>
+                <div class="error-text email">Email Address can't be blank</div>
+              </div>
+            </div>
+            <div class="input-box">
+              <div class="input-field field">
+                <input type="number" placeholder="Phone Number" id="phone" class="field item" autocomplete="off" name="phone_number"/>
+                <div class="error-text">Phone Nember can't be blank</div>
+              </div>
+              <div class="input-field field">
+                <input type="text" placeholder="Email Subject" id="subject" class="field item" autocomplete="off" name="subject"/>
+                <div class="error-text">Subject can't be blank</div>
+              </div>
+            </div>
+            <div class="textarea-field field">
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Your Message"
+                class="field item"
+                autocomplete="off"
+              ></textarea>
+            <div class="error-text">Message can't be blank</div>
+          </div>
+            <input type="submit" value="Send Message" class="btn btn-send" />
+            <button class="btn btn-loading hide">
+              <i class="fa fa-refresh fa-spin"></i>Loading
+            </button>
+          </form>
+      </div>
+    </section>
+    <!-- contact section end -->
+
+    <!-- footer section start -->
+    <footer class="footer">
+      <div class="container">
+        <div class="col-1">
+          <h4>RKurniaw</h4>
+          <h5>Contact Us</h5>
+          <p>rkurniaw7@gmail.com</p>
+          <p>Banjarnegara, Central Java, Indonesia</p>
+        </div>
+        <div class="col-2">
+          <h5>Writing Category</h5>
+          <ul>
+            <li><a href="#">Programming</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Lifestyle</a></li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <h5>Links</h5>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container-end">
+        <div class="social-media">
+          <a href="https://github.com/rkurniaw" target="_blank"><i class="bx bxl-github"></i></a>
+          <a href="https://facebook.com" target="_blank"><i class="bx bxl-facebook"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="bx bxl-twitter"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="bx bxl-instagram-alt"></i></a>
+          <a href="https://linkedin.com" target="_blank"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://youtube.com" target="_blank"><i class="bx bxl-youtube"></i></a>
+        </div>
+        <p>Copyright &copy; 2024 by RKurniaw | All rights reserved</p>
+      </div>
+    </footer>
+    <!-- footer section end -->
+
+    <!-- back to top start -->
+    <div id="to-top" class="to-top hidden">
+      <a href="#"><i class="bx bx-up-arrow-alt"></i></a>
+    </div>
+    <!-- back to top end -->
+
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- typed js -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- smtpjs -->
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+
+    <!-- customs js -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
